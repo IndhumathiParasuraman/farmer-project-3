@@ -1,0 +1,32 @@
+:root{--bg:#f2f5fa;--card:#fff;--ink:#17202e;--mute:#586277;--main:#1e3a8a;--acc:#f59e0b;--line:#dde3ee}
+*{box-sizing:border-box;margin:0}
+body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+h1,h2,h3{font-family:Sora,system-ui,sans-serif}
+.wrap{max-width:1000px;margin:auto;padding:0 20px}
+header{background:var(--main);color:#fff;padding:34px 0 0}
+header h1{font-size:2.1rem;font-weight:800}
+header p{opacity:.88;max-width:580px;margin:6px 0 20px}
+nav{display:flex;gap:4px;flex-wrap:wrap}
+nav button{background:transparent;color:#fff;border:0;padding:12px 18px;border-radius:10px 10px 0 0;font:600 .95rem Inter;cursor:pointer;opacity:.78}
+nav button.on{background:var(--bg);color:var(--main);opacity:1}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--acc)}
+main{padding-top:24px;padding-bottom:60px}
+section{display:none}section.on{display:block}
+h2{font-size:1.2rem;margin:6px 0 12px}h3{font-size:1rem;margin-bottom:4px}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+.mute{color:var(--mute);font-size:.9rem}
+.tools{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:16px}
+label{font-size:.85rem;color:var(--mute)}
+input,select{padding:10px 12px;border:1px solid var(--line);border-radius:10px;font:inherit;color:var(--ink);background:#fff}
+.row{display:flex;gap:10px;align-items:center;margin-bottom:10px;flex-wrap:wrap}
+.btn{border:0;border-radius:10px;font:600 .9rem Inter;cursor:pointer;padding:10px 18px;background:var(--main);color:#fff}
+.btn.x{background:#fde8e8;color:#b42318;padding:9px 14px}
+.msg{margin-top:12px;font-weight:600}.ok{color:#1d4ed8}.bad{color:#b42318}
+.scroll{overflow-x:auto}table{width:100%;border-collapse:collapse}
+th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line)}th{color:var(--mute);font-size:.85rem}
+.bar{height:10px;background:var(--line);border-radius:6px;overflow:hidden}.bar i{display:block;height:100%;background:var(--main);transition:width .4s}
+.big{font-family:Sora;font-size:1.5rem;font-weight:800;color:var(--main)}
+.save{color:#1d4ed8;font-weight:600}
+.note{background:#fef3d7;border-left:4px solid var(--acc);padding:12px 14px;border-radius:8px;margin-top:16px}
+.rank{display:inline-block;background:var(--acc);border-radius:99px;padding:2px 11px;font-size:.8rem;font-weight:600;margin-bottom:6px}

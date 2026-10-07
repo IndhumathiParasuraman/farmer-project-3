@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FarmWise – Farm Resource Management Plan</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header><div class="wrap">
+  <h1>FarmWise</h1>
+  <p>Plan water, fertilizer, labour, machinery and land for your farm without losing yield.</p>
+  <nav id="nav">
+    <button class="on" data-t="plan">Farm plan</button>
+    <button data-t="save">Where to save</button>
+    <button data-t="guard">Protect yield</button>
+  </nav>
+</div></header>
+
+<main class="wrap">
+<section id="plan" class="on">
+  <div class="card">
+    <h2>1. Your farm</h2>
+    <div class="tools">
+      <label>Total land (acres)<br><input id="land" type="number" min="1" value="10"></label>
+      <label>Irrigation<br><select id="irr"></select></label>
+      <label>Fertilizer<br><select id="fert"></select></label>
+      <label>Machinery<br><select id="mach"></select></label>
+    </div>
+    <h2>2. Crops and acres</h2>
+    <div id="rows"></div>
+    <button class="btn" id="add">Add crop</button>
+    <p class="msg" id="landMsg"></p>
+  </div>
+
+  <h2>3. Resource plan</h2>
+  <div class="card scroll"><table>
+    <thead><tr><th>Resource</th><th>Normal practice</th><th>Your plan</th><th>Saved</th><th style="width:25%">Use vs normal</th></tr></thead>
+    <tbody id="res"></tbody></table></div>
+  <div class="grid" style="margin-top:14px" id="sum"></div>
+</section>
+
+<section id="save">
+  <h2>Where you can save the most</h2>
+  <p class="mute">Ranked from your current crops and acres. Change them on the Farm plan tab.</p>
+  <div class="grid" id="levers"></div>
+</section>
+
+<section id="guard">
+  <h2>Keep productivity while saving</h2>
+  <div class="grid" id="guards"></div>
+  <div class="note">All figures are rough per-acre estimates for planning. Confirm with your local agriculture officer or soil test.</div>
+</section>
+</main>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script src="js/planner.js"></script>
+<script src="js/savings.js"></script>
+<script src="js/guard.js"></script>
+</body>
+</html>
